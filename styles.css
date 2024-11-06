@@ -1,0 +1,282 @@
+/* Reset básico para consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f8ff;
+    color: #333;
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(90deg, #89CFF0, #4fa1d6);
+    padding: 2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+}
+
+header .logo {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 2rem;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    font-weight: 300;
+}
+
+header nav a:hover {
+    color: #eceff1;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #eceff1;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Caixa de conteúdo */
+.content-box {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0; /* Margem para separar do cabeçalho e do rodapé */
+}
+
+.content-box h2 {
+    font-size: 2rem;
+    color: #4fa1d6; /* Cor azul pastel */
+    margin-bottom: 1.5rem; /* Margem inferior */
+}
+
+.content-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem; /* Margem inferior para espaçamento entre parágrafos */
+}
+
+.content-box a {
+    color: #4fa1d6; /* Cor azul pastel para links */
+    text-decoration: underline; /* Sublinhado para links */
+    transition: color 0.3s; /* Efeito de transição na cor */
+}
+
+.content-box a:hover {
+    color: #3a84b6; /* Cor mais escura ao passar o mouse */
+}
+
+/* Formulário */
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+.form-box label {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #4fa1d6;
+}
+.form-box input {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+    font-weight: 300;
+}
+.form-box input:focus {
+    border-color: #4fa1d6;
+    outline: none;
+}
+.form-box button {
+    padding: 1rem 2rem;
+    background-color: #4fa1d6;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 300;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-box button:hover {
+    background-color: #3a84b6;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Caixa de recomendações */
+.recommendation-box {
+    padding: 2rem; /* Padding interno */
+    margin-bottom: 3rem; /* Margem inferior */
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-left: 4px solid #4fa1d6; /* Borda esquerda colorida */
+}
+
+.recommendation-box h3 {
+    font-size: 2rem; /* Aumentar o tamanho do cabeçalho */
+    margin-bottom: 1rem; /* Margem inferior */
+    color: #4fa1d6; /* Cor azul pastel */
+}
+
+.recommendation-box p {
+    font-size: 1.1rem; /* Tamanho do texto */
+    color: #666; /* Cor do texto mais suave */
+    line-height: 1.6; /* Altura da linha */
+    font-weight: 300; /* Peso da fonte */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #4fa1d6;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: auto;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-weight: 300;
+}
+
+/* Caixa de medição */
+.measurement-box {
+    background-color: #e3f2fd;
+    border: 2px dashed #4fa1d6;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Resultados */
+.result-box {
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-box h3 {
+    margin-bottom: 1rem;
+    color: #4fa1d6;
+    font-weight: 300;
+}
+
+.result-box p {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 300;
+}
+
+/* Temas */
+body.light {
+    background-color: #f3f8ff; /* Fundo claro */
+    color: #333; /* Texto escuro */
+}
+
+body.dark {
+    background-color: #333; /* Fundo escuro */
+    color: #f3f8ff; /* Texto claro */
+}
+
+header.light {
+    background: linear-gradient(90deg, #89CFF0, #4fa1d6);
+}
+
+header.dark {
+    background: linear-gradient(90deg, #2b2b2b, #555); /* Gradiente para cabeçalho escuro */
+}
+
+.content-box.light {
+    background-color: #ffffff; /* Fundo claro */
+}
+
+.content-box.dark {
+    background-color: #444; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+}
+
+footer.light {
+    background-color: #4fa1d6; /* Fundo do rodapé claro */
+    color: #fff; /* Texto claro */
+}
+
+footer.dark {
+    background-color: #222; /* Fundo escuro do rodapé */
+    color: #fff; /* Texto claro */
+}
+
+/* Estilos para caixas de conteúdo no tema escuro */
+.recommendation-box.dark,
+.measurement-box.dark,
+.result-box.dark {
+    background-color: #444; /* Fundo escuro para caixas de conteúdo */
+    color: #f3f8ff; /* Texto claro */
+}
+
+/* Estilos do botão de alternância */
+#theme-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <title>JQ Medições</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao JQ Medições</h1>
+        <nav>
+            <a href="#medicoes">Medições</a>
+            <a href="#recomendacoes">Recomendações</a>
+        </nav>
+        <button id="theme-toggle">🌚</button> <!-- Botão para alternar tema -->
+    </header>
+    <main>
+        <section class="content-box" id="home">
+            <h2>Sua Ferramenta favorita para Monitoramento de Glicemia</h2>
+            <p>
+                Nosso sistema permite que você consulte rapidamente seus níveis de glicemia sem complicações. 
+                Basta inserir seus dados e ver imediatamente se sua medição está dentro dos parâmetros saudáveis.
+            </p>
+            <p>
+                Além disso, oferecemos recomendações para ajudar você a manter seu controle glicêmico de maneira 
+                eficiente e saudável.
+            </p>
+        </section>
+        <section class="content-box" id="medicoes">
+            <h2>Registro de Glicemia</h2>
+            <div class="measurement-box">
+                <form class="form-box" id="medicaoForm">
+                    <label for="glicemia">Valor da Glicemia:</label>
+                    <input type="number" id="glicemia" placeholder="Digite seu valor" required>
+                    <label for="horario">Horário da Medição:</label>
+                    <input type="time" id="horario" required>
+                    <label for="jejum">Estava em jejum?</label>
+                    <select id="jejum">
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select><br>
+                    <button type="submit">Registrar Medição</button>
+                </form>
+            </div>
+            <div class="result-box">
+                <h3>Resultado</h3>
+                <p id="resultado">Aguardando entrada...</p>
+            </div>
+        </section>
+        <section class="content-box" id="recomendacoes">
+            <h2>Recomendações para Controle de Glicemia</h2>
+            <div class="recommendation-box">
+                <ul>
+                    <li><strong>Mantenha uma alimentação equilibrada:</strong> Consuma alimentos ricos em fibras, como frutas, legumes e grãos integrais. 
+                        Limite o consumo de carboidratos simples, que podem elevar rapidamente a glicemia. Escolha alimentos com baixo índice glicêmico 
+                        para ajudar no controle dos níveis de açúcar no sangue.</li>
+                    <li><strong>Pratique atividades físicas regularmente:</strong> O exercício ajuda a melhorar a sensibilidade do corpo à insulina e a 
+                        controlar os níveis de glicose no sangue. Tente incluir pelo menos 30 minutos de atividade física moderada, como caminhadas, na sua rotina diária.</li>
+                    <li><strong>Monitore seus níveis de glicose:</strong> Verificar sua glicemia regularmente é essencial para identificar padrões e ajustar sua dieta, 
+                        medicação ou rotina de exercícios conforme necessário.</li>
+                    <li><strong>Mantenha-se hidratado:</strong> A água ajuda a remover o excesso de glicose através da urina e mantém seu corpo funcionando corretamente. 
+                        Evite bebidas açucaradas que podem aumentar a glicemia.</li>
+                    <li><strong>Evite picos de glicemia:</strong> Comer pequenas refeições ao longo do dia, em vez de grandes refeições, pode ajudar a manter a glicemia estável. 
+                        Evite doces em excesso e alimentos altamente processados.</li>
+                    <li><strong>Controle o estresse:</strong> O estresse pode afetar os níveis de glicose no sangue, aumentando a produção de hormônios como o cortisol. 
+                        Tente técnicas de relaxamento, como meditação ou ioga, para manter o estresse sob controle.</li>
+                    <li><strong>Durma bem:</strong> O sono inadequado pode afetar negativamente o controle da glicemia, portanto, busque uma rotina de sono saudável com 
+                        7 a 9 horas por noite.</li>
+                    <li><strong>Consulte profissionais de saúde:</strong> Sempre que tiver dúvidas sobre sua condição ou medicação, consulte um médico ou nutricionista 
+                        para orientações adequadas.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 JQ Medições. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
